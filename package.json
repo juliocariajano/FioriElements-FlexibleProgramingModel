@@ -19,7 +19,11 @@
   },
   "scripts": {
     "start": "cds-run",
-    "dev":"cds watch",
-    "test": "node --test"
-  }
+    "dev": "cds watch",
+    "test": "node --test",
+    "watch-bookshop-ui": "cds watch --open bookshop-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/bookshop-ui"
+  ]
 }
