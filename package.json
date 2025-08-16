@@ -14,9 +14,12 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "@cap-js/cds-types": "^0.13.0"
+    "@cap-js/cds-types": "^0.13.0",
+    "@cap-js/cds-test": "^0"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-run",
+    "dev":"cds watch",
+    "test": "node --test"
   }
 }

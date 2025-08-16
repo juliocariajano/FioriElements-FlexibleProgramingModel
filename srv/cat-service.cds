@@ -1,5 +1,12 @@
-using my.bookshop as my from '../db/schema';
+using {shopBook} from '../db/schema';
 
 service CatalogService {
-    @readonly entity Books as projection on my.Books;
+    entity Books as projection on shopBook.Books actions {
+            action submitOrder(quantity : Integer) returns {
+                stock : Integer
+            };
+        };
+        
+	entity Sales as projection on shopBook.Sales;
+    entity Authors as projection on shopBook.Authors;
 }
