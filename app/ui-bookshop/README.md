@@ -1,15 +1,15 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sat Aug 16 2025 15:05:03 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Sun Aug 17 2025 21:00:51 GMT+0200 (hora de verano de Europa central)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.18.5|
-|**Generation Platform**<br>SAP Business Application Studio|
+|**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
-|**Service URL**<br>http://localhost:4004/odata/v4/catalog/|
-|**Module Name**<br>bookshop-ui|
-|**Application Title**<br>BookShop|
+|**Service URL**<br>http://localhost:4004/catalog/|
+|**Module Name**<br>ui-bookshop|
+|**Application Title**<br>Book Shop|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.139.0|
@@ -19,15 +19,15 @@
 |**Main Entity**<br>Books|
 |**Navigation Entity**<br>None|
 
-## bookshop-ui
+## ui-bookshop
 
-An SAP Fiori application.
+Book Shop Aplication
 
 ### Starting the generated app
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated app, start your CAP project:  and navigate to the following location in your browser:
 
-http://localhost:4004/bookshop-ui/webapp/index.html
+http://localhost:4004/ui-bookshop/webapp/index.html
 
 #### Pre-requisites:
 

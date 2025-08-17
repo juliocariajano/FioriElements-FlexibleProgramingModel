@@ -21,9 +21,13 @@
     "start": "cds-run",
     "dev": "cds watch",
     "test": "node --test",
-    "watch-bookshop-ui": "cds watch --open bookshop-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-bookshop-ui": "cds watch --open bookshop-ui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-books-ui": "cds watch --open books-ui/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-ui-bookshop": "cds watch --open ui-bookshop/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
-    "app/bookshop-ui"
+    "app/bookshop-ui",
+    "app/books-ui",
+    "app/ui-bookshop"
   ]
 }
