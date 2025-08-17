@@ -1,12 +1,15 @@
-using {shopBook} from '../db/schema';
+using {shopBook as db} from '../db/schema';
 
-service CatalogService {
-    entity Books as projection on shopBook.Books actions {
+service CatalogService @(path:'/catalog') {
+    entity Books as projection on db.Books{
+        *;
+        actions {  
             action submitOrder(quantity : Integer) returns {
                 stock : Integer
-            };
+                }
         };
         
-	entity Sales as projection on shopBook.Sales;
-    entity Authors as projection on shopBook.Authors;
+    entity Authors as projection on db.Authors;
+    entity Genres  as projection on db.Genres;
+    entity Sales   as projection on db.Sales;
 }
