@@ -1,0 +1,7 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:macros="sap.fe.macros" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="uibookshop.ext.view.Book-app">
+    <Page id="Book-app" title="{i18n>Book-appTitle}" >
+        <content>
+            <macros:Table id="Table" metaPath="/Books/@com.sap.vocabularies.UI.v1.LineItem#tableMacro1" header="{i18n>myBooks}" headerVisible="true" isSearchable="true"/>
+        </content>
+    </Page>
+</mvc:View>

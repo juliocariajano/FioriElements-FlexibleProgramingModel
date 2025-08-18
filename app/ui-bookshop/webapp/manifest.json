@@ -50,7 +50,9 @@
         "sap.m": {},
         "sap.ui.core": {},
         "sap.fe.templates": {},
-        "sap.f": {}
+        "sap.f": {},
+        "sap.fe.core": {},
+        "sap.fe.macros": {}
       }
     },
     "contentDensities": {
@@ -91,30 +93,29 @@
       },
       "routes": [
         {
+          "name": "BooksBook-appPage",
           "pattern": ":?query:",
-          "name": "BooksList",
           "target": [
-            "BooksList"
+            "BooksBook-appPage"
           ]
         },
         {
-          "pattern": "Books({key}):?query:",
           "name": "BooksObjectPage",
+          "pattern": "Books({BooksKey}):?query:",
           "target": [
-            "BooksList",
+            "BooksBook-appPage",
             "BooksObjectPage"
           ]
         }
       ],
       "targets": {
-        "BooksList": {
+        "BooksBook-appPage": {
           "type": "Component",
-          "id": "BooksList",
-          "name": "sap.fe.templates.ListReport",
+          "id": "BooksBook-appPage",
+          "name": "sap.fe.core.fpm",
+          "controlAggregation": "beginColumnPages",
           "options": {
             "settings": {
-              "contextPath": "/Books",
-              "variantManagement": "Page",
               "navigation": {
                 "Books": {
                   "detail": {
@@ -122,42 +123,38 @@
                   }
                 }
               },
-              "controlConfiguration": {
-                "@com.sap.vocabularies.UI.v1.LineItem": {
-                  "tableSettings": {
-                    "type": "ResponsiveTable",
-                    "enableExport": true,
-                    "widthIncludingColumnHeader": true,
-                    "personalization": {
-                      "column": true
-                    }
-                  },
-                  "columns": {
-                    "DataField::title": {
-                      "availability": "Default",
-                      "widthIncludingColumnHeader": true
-                    }
-                  }
-                }
-              },
-              "initialLoad": "Enabled"
+              "contextPath": "/Books",
+              "viewName": "uibookshop.ext.view.Book-app"
             }
           },
-          "controlAggregation": "beginColumnPages",
           "contextPattern": ""
         },
         "BooksObjectPage": {
           "type": "Component",
           "id": "BooksObjectPage",
           "name": "sap.fe.templates.ObjectPage",
+          "controlAggregation": "midColumnPages",
           "options": {
             "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/Books"
+              "navigation": {},
+              "contextPath": "/Books",
+              "content": {
+                "body": {
+                  "sections": {
+                    "Sales": {
+                      "template": "uibookshop.ext.fragment.Sales",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "GeneratedFacet1"
+                      },
+                      "title": "Sales"
+                    }
+                  }
+                }
+              }
             }
           },
-          "controlAggregation": "midColumnPages",
-          "contextPattern": "/Books({key})"
+          "contextPattern": "/Books({BooksKey})"
         }
       }
     },

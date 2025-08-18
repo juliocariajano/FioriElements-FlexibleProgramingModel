@@ -5,37 +5,37 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'title',
+                Label : '{i18n>Title}',
                 Value : title,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'descr',
+                Label : '{i18n>Description}',
                 Value : descr,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'author_ID',
-                Value : author_ID,
+                Value : author.name,
+                Label : '{i18n>Author1}',
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'genre_ID',
-                Value : genre_ID,
+                Value : genre.name,
+                Label : '{i18n>Genero}',
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'stock',
+                Label : '{i18n>Stock1}',
                 Value : stock,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'criticality',
+                Label : '{i18n>Criticality}',
                 Value : criticality,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'price',
+                Label : '{i18n>Price}',
                 Value : price,
             },
             {
@@ -61,28 +61,94 @@ annotate service.Books with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'title',
+            Label : '{i18n>Title}',
             Value : title,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'descr',
+            Label : '{i18n>Descripction}',
             Value : descr,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'author_ID',
+            Label : '{i18n>Author}',
             Value : author_ID,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'genre_ID',
-            Value : genre_ID,
+            Value : author.name,
+            Label : 'name',
+        },
+    ],
+    UI.LineItem #tableMacro : [
+        {
+            $Type : 'UI.DataField',
+            Value : descr,
+            Label : 'descr',
         },
         {
             $Type : 'UI.DataField',
-            Label : 'stock',
+            Value : price,
+            Label : 'price',
+        },
+        {
+            $Type : 'UI.DataField',
             Value : stock,
+            Label : 'stock',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : title,
+            Label : 'title',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : author.name,
+            Label : 'name',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : genre.name,
+        },
+    ],
+    UI.LineItem #tableMacro1 : [
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : title,
+            Label : '{i18n>Title}',
+            @UI.Importance : #High,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : descr,
+            Label : '{i18n>Description1}',
+            @UI.Importance : #High,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : price,
+            Label : '{i18n>Price}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : stock,
+            Label : '{i18n>Stock1}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : author.name,
+            Label : '{i18n>Author1}',
+            @UI.Importance : #High,
         },
     ],
 );
