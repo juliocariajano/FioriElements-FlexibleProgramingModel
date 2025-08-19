@@ -141,13 +141,13 @@
               "content": {
                 "body": {
                   "sections": {
-                    "Sales": {
-                      "template": "uibookshop.ext.fragment.Sales",
+                    "Order": {
+                      "template": "uibookshop.ext.fragment.Order",
                       "position": {
                         "placement": "After",
                         "anchor": "GeneratedFacet1"
                       },
-                      "title": "Sales"
+                      "title": "{i18n>order}"
                     }
                   }
                 }
