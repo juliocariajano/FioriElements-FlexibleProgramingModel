@@ -143,6 +143,14 @@
                         "anchor": "GeneratedFacet1"
                       },
                       "title": "Order"
+                    },
+                    "Sales": {
+                      "template": "uibookshop.ext.fragment.Sales",
+                      "position": {
+                        "placement": "After",
+                        "anchor": "Orders"
+                      },
+                      "title": "Sales"
                     }
                   }
                 }
