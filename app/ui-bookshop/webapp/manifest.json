@@ -95,17 +95,12 @@
         {
           "name": "BooksBook-appPage",
           "pattern": ":?query:",
-          "target": [
-            "BooksBook-appPage"
-          ]
+          "target": ["BooksBook-appPage"]
         },
         {
           "name": "BooksObjectPage",
           "pattern": "Books({BooksKey}):?query:",
-          "target": [
-            "BooksBook-appPage",
-            "BooksObjectPage"
-          ]
+          "target": ["BooksBook-appPage", "BooksObjectPage"]
         }
       ],
       "targets": {
@@ -141,13 +136,13 @@
               "content": {
                 "body": {
                   "sections": {
-                    "Order": {
-                      "template": "uibookshop.ext.fragment.Order",
+                    "Orders": {
+                      "template": "uibookshop.ext.fragment.Orders",
                       "position": {
                         "placement": "After",
                         "anchor": "GeneratedFacet1"
                       },
-                      "title": "{i18n>order}"
+                      "title": "Order"
                     }
                   }
                 }

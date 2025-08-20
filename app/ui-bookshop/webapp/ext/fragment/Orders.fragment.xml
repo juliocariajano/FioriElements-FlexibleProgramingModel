@@ -2,7 +2,7 @@
 
 	<HBox
 		id="hBox"
-		core:require="{ handler: 'bookshopui/ext/fragment/Order'}" >
+		core:require ="{ handler: 'uibookshop/ext/fragment/Orders'}">
 
 		<StepInput 
 			id="stepInput"
