@@ -12,9 +12,10 @@ sap.ui.define(['sap/m/MessageToast', 'sap/ui/core/mvc/Controller', 'sap/ui/model
 		},
 
 		press: function() {
-			MessageToast.show("The Line Micro Chart has been pressed.");
+			// MessageToast.show("The Line Micro Chart has been pressed.");
 		}
 	});
 
 	return PageController;
+
 });
