@@ -95,12 +95,17 @@
         {
           "name": "BooksBook-appPage",
           "pattern": ":?query:",
-          "target": ["BooksBook-appPage"]
+          "target": [
+            "BooksBook-appPage"
+          ]
         },
         {
           "name": "BooksObjectPage",
           "pattern": "Books({BooksKey}):?query:",
-          "target": ["BooksBook-appPage", "BooksObjectPage"]
+          "target": [
+            "BooksBook-appPage",
+            "BooksObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -144,13 +149,13 @@
                       },
                       "title": "Order"
                     },
-                    "Sales": {
-                      "template": "uibookshop.ext.fragment.Sales",
+                    "SalesOrder": {
+                      "template": "uibookshop.ext.fragment.SalesOrders",
                       "position": {
                         "placement": "After",
                         "anchor": "Orders"
                       },
-                      "title": "Sales"
+                      "title": "SalesOrders"
                     }
                   }
                 }

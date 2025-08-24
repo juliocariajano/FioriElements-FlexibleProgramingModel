@@ -182,4 +182,3 @@ annotate service.Books with {
         ],
     }
 };
-
