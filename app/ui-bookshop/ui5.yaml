@@ -4,6 +4,16 @@ specVersion: "3.1"
 metadata:
   name: uibookshop
 type: application
+framework:
+  name: SAPUI5
+  version: "1.139.0"
+  libraries:
+    - name: sap.ui.core
+    - name: sap.m
+    - name: sap.f
+    - name: sap.fe.core
+    - name: sap.fe.templates
+
 server:
   customMiddleware:
     - name: fiori-tools-proxy

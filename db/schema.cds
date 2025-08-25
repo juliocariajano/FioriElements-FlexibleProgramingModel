@@ -6,6 +6,7 @@ using {
 } from '@sap/cds/common';
 
 namespace shopBook;
+
 @odata.draft.enabled
 entity Books : managed, cuid {
     title       : localized String(111) @mandatory;

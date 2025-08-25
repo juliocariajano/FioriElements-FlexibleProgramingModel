@@ -83,6 +83,15 @@
     "resources": {
       "css": []
     },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.fe.templates.ObjectPage.ObjectPageController": {
+            "controllerName": "uibookshop.ext.fragment.Orders"
+          }
+        }
+      }
+    },
     "routing": {
       "config": {
         "flexibleColumnLayout": {
@@ -95,17 +104,12 @@
         {
           "name": "BooksBook-appPage",
           "pattern": ":?query:",
-          "target": [
-            "BooksBook-appPage"
-          ]
+          "target": ["BooksBook-appPage"]
         },
         {
           "name": "BooksObjectPage",
           "pattern": "Books({BooksKey}):?query:",
-          "target": [
-            "BooksBook-appPage",
-            "BooksObjectPage"
-          ]
+          "target": ["BooksBook-appPage", "BooksObjectPage"]
         }
       ],
       "targets": {
@@ -149,13 +153,13 @@
                       },
                       "title": "Order"
                     },
-                    "SalesOrder": {
-                      "template": "uibookshop.ext.fragment.SalesOrders",
+                    "SalesData": {
+                      "template": "uibookshop.ext.fragment.SalesData",
                       "position": {
                         "placement": "After",
                         "anchor": "Orders"
                       },
-                      "title": "SalesOrders"
+                      "title": "Sales Data"
                     }
                   }
                 }
